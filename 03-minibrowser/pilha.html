@@ -1,0 +1,28 @@
+<script>
+console.log('Pilha/Stack');
+class stack{
+    constructor(){
+        this.cursor = 0;
+        this.data = [];
+    }
+    push(item){
+        this.cursor = this.cursor + 1;
+        this.data.push(item);
+    }
+    back(){this.cursor = this.cursor - 1;
+        this.data.pop();
+    }
+    print(){
+        console.log('Cursor: ', this.cursor);
+        console.log('Ítens atuais: ', this.data);
+    }
+}
+
+const history = new stack();
+history.push('https://google.com');
+history.push('https://youtube.com');
+history.push('https://facebook.com');
+history.print();
+history.back();
+history.print();
+</script>
